@@ -1,6 +1,8 @@
 # Christmas Card
 
-A Christmas Card built with React. When opened it will play the 8BIT version of ***All I Want for Christmas*** by **Mariah Carey**
+A Christmas Card built with React. 
+
+When opened it will play the 8BIT version of ***All I Want for Christmas*** by **Mariah Carey**
 
 This could be easily changed to suit any required occasion.
 
