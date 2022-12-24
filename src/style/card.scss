@@ -90,10 +90,18 @@
 
     h1 {
       font-size: 3rem;
+
+      @media screen and (max-width: 768px) {
+        font-size: 2rem;
+      }
     }
 
     .message {
       margin: 3.5rem 0;
+
+      @media screen and (max-width: 768px) {
+        margin: 2rem 0;
+      }
     }
 
     &--footer {
