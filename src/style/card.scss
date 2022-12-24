@@ -99,17 +99,17 @@
   &.open {
     left: 200px;
 
+    .card__left {
+      transform: rotateY(-180deg);
+    }
+
     @media screen and (max-width: 768px) {
       left: 0;
 
       .card__left {
-        transform: rotateY(-180deg);
+        transform: rotateY(-360deg);
+        z-index: -1;
       }
-    }
-
-    .card__left {
-      transform: rotateY(-360deg);
-      z-index: -1;
     }
   }
 }
