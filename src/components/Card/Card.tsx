@@ -25,7 +25,7 @@ const Card = () => {
   }, [toggleCard]);
 
   return (
-    <div className={toggleCard ? "card open flex-center" : "card flex-center"} onClick={onSetToggleCard}>
+    <div className={toggleCard ? "card open flex-center" : "card flex-center"} onClick={onSetToggleCard} title="Click Me!">
       <audio ref={audioRef} src={carol} />
       <div className="card__left">
         <div className="card__left--face">
