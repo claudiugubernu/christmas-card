@@ -1,18 +1,30 @@
 import Image from '../Image/Image'
 import src from '../../assets/imgs/cardImage.jpeg'
 import fallbackSrc from '../../assets/imgs/cardImage.webp'
-import { useState } from 'react'
+import carol from '../../assets/audio/carol.mp3'
+import { useEffect, useState, useRef, LegacyRef } from 'react'
 
 const Card = () => {
 
-  const [toggleCard, setToggleCard] = useState<boolean>(false)
+  const [toggleCard, setToggleCard] = useState<boolean>(false);
+  const audioRef = useRef<HTMLAudioElement>(new Audio(carol));
 
   const onSetToggleCard = () => {
     setToggleCard((prev) => !prev);
   }
 
+  useEffect(() => {
+    if (toggleCard) {
+      audioRef.current.play();
+    } else {
+      audioRef.current.currentTime = 0;
+      audioRef.current.pause();
+    }
+  }, [toggleCard]);
+
   return (
     <div className={toggleCard ? "card open flex-center" : "card flex-center"} onClick={onSetToggleCard}>
+      <audio ref={audioRef} src={carol} />
       <div className="card__left">
         <div className="card__left--face">
           <Image
