@@ -1,0 +1,50 @@
+:root {
+  --font-family-header: 'Oswald', sans-serif;
+  --font-family-body: 'Source Sans Pro', sans-serif;
+  --font-family-handwriting: 'Passions Conflict', cursive;
+  
+  --christmas-red: #CC231E;
+  --christmas-teal: #235E6F;
+  --christmas-black: #444;
+  --white: #ffffff;
+  --off-white: #d1d0d0;
+  --box-shadow: 5px 0 5px rgba(0,0,0,0.1);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family-body);
+  color: var(--christmas-black);
+}
+
+section {
+  background-color: var(--christmas-teal);
+  height: 100vh;
+  width: 100%;
+}
+
+h1 {
+  font-family: var(--font-family-header);
+}
+
+.red {
+  color: var(--christmas-red);
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
