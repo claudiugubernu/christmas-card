@@ -1,8 +1,10 @@
 import Image from '../Image/Image'
-import src from '../../assets/imgs/cardImage.jpeg'
-import fallbackSrc from '../../assets/imgs/cardImage.webp'
-import carol from '../../assets/audio/carol.mp3'
 import { useEffect, useState, useRef, LegacyRef } from 'react'
+import src from '../../assets/imgs/cardImage.webp'
+import fallbackSrc from '../../assets/imgs/cardImage.jpeg'
+import carol from '../../assets/audio/carol.mp3'
+import insideImgFallbackSrc from '../../assets/imgs/inside-img.jpg'
+import insideImgSrc from '../../assets/imgs/inside-img.webp'
 
 const Card = () => {
 
@@ -34,7 +36,13 @@ const Card = () => {
           />
           <p className="front-hooray">Merry <span className="red">Christmas</span></p>
         </div>
-        <div className="card__left--back"></div>
+        <div className="card__left--back">
+          <Image
+            src={insideImgSrc}
+            fallbackSrc={insideImgFallbackSrc}
+            alt='christmas image inside card'
+          />
+        </div>
       </div>
       <div className="card__right">
         <h1>Merry <span className="red">Christmas</span></h1>
